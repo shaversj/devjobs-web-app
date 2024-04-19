@@ -6,16 +6,26 @@
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:push": "drizzle-kit push:sqlite --config drizzle.config.js",
+    "db:generate": "drizzle-kit generate:sqlite --config drizzle.config.js",
+    "db:studio": "drizzle-kit studio --host localhost --port 3002 --verbose --config drizzle.config.js",
+    "db:seed": "node --import tsx --env-file .env ./seed/insert.js",
+    "db:delete": "node --import tsx --env-file .env ./seed/delete.js"
   },
   "dependencies": {
+    "better-sqlite3": "^9.5.0",
     "clsx": "^2.1.0",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.30.8",
     "next": "14.2.1",
     "react": "^18",
     "react-dom": "^18",
-    "tailwind-merge": "^2.3.0"
+    "tailwind-merge": "^2.3.0",
+    "tsx": "^4.7.2"
   },
   "devDependencies": {
+    "drizzle-kit": "^0.20.16",
     "eslint": "^8",
     "eslint-config-next": "14.2.1",
     "postcss": "^8",
