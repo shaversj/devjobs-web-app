@@ -1,4 +1,6 @@
-export default function Logo({ logo, company }) {
+import { cn } from "@/app/_utils/utils";
+
+export default function Logo({ logo, company, variant }) {
   let logoBackgroundVarients = {
     Scoot: "[background-color:hsl(36_87%_49%)]",
     Blogr: "[background-color:hsl(12_79%_52%)]",
@@ -16,7 +18,11 @@ export default function Logo({ logo, company }) {
 
   return (
     <>
-      <div className={`absolute z-10 flex h-[50px] w-[50px] translate-y-[-50%] transform items-center justify-center rounded-xl ${logoBackgroundVarients[company]} `}>
+      <div
+        className={cn(`${logoBackgroundVarients[company]}`, {
+          "absolute z-10 flex h-[50px] w-[50px] translate-y-[-50%] transform items-center justify-center rounded-xl": variant === "card",
+        })}
+      >
         <img src={logo} alt={company} />
       </div>
     </>
