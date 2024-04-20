@@ -28,38 +28,6 @@ export default function SearchFilter() {
     100,
   );
 
-  // const handleSearch = useDebouncedCallback((term) => {
-  //   const params = new URLSearchParams(searchParams);
-  //   if (term) {
-  //     params.set("jobFilter", term);
-  //   } else {
-  //     params.delete("jobFilter");
-  //   }
-  //   replace(`${pathname}?${params.toString()}`);
-  // }, 300);
-  //
-  // const handleLocation = useDebouncedCallback((term) => {
-  //   console.log(term);
-  //   const params = new URLSearchParams(searchParams);
-  //   if (term) {
-  //     params.set("locationFilter", term);
-  //   } else {
-  //     params.delete("locationFilter");
-  //   }
-  //   replace(`${pathname}?${params.toString()}`);
-  // }, 50);
-  //
-  // const handleContract = useDebouncedCallback(() => {
-  //   const params = new URLSearchParams(searchParams);
-  //   if (!searchParams.get("contractFilter")) {
-  //     params.set("contractFilter", "Full Time");
-  //   } else {
-  //     params.delete("contractFilter");
-  //   }
-  //   setShowCheck(!showCheck);
-  //   replace(`${pathname}?${params.toString()}`);
-  // }, 300);
-
   return (
     <div className={"flex h-[80px] -translate-y-1/2 items-center rounded-md bg-white pl-6 pr-4"}>
       <input
