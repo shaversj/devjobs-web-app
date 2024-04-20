@@ -1,15 +1,15 @@
-import mydata from "../assets/data.json";
 import CardList from "@/app/_components/CardList";
-import Header from "@/app/_components/Header";
 import Job from "@/app/_components/Job";
 import SearchFilter from "@/app/_components/SearchFilter";
-import { getJobsByTitle } from "@/app/_components/actions";
+import { getJobsByFilters } from "@/app/_components/actions";
 
 export default async function Home({ searchParams }) {
   let params = new URLSearchParams(searchParams);
-  let term = params.get("jobFilter");
+  let jobFilter = params.get("jobFilter");
+  let locationFilter = params.get("locationFilter");
+  let contractFilter = params.get("contractFilter");
 
-  const filteredData = await getJobsByTitle(term, mydata);
+  const filteredData = await getJobsByFilters(jobFilter, locationFilter, contractFilter);
 
   return (
     <>
