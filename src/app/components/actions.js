@@ -1,6 +1,6 @@
 import { db } from "@/app/db";
 import { jobsTable } from "@/app/db/drizzle.schema";
-import { and, like, sql } from "drizzle-orm";
+import { and, like, sql, eq } from "drizzle-orm";
 
 export async function getJobsByFilters(jobFilter, locationFilter, contractFilter) {
   let conditions = [];
@@ -15,4 +15,8 @@ export async function getJobsByFilters(jobFilter, locationFilter, contractFilter
         .where(and(...conditions))
         .execute()
     : await db.select().from(jobsTable).execute();
+}
+
+export async function getJobById(id) {
+  return db.select().from(jobsTable).where(eq(jobsTable.id, id)).execute();
 }

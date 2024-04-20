@@ -1,7 +1,7 @@
-import CardList from "@/app/_components/CardList";
-import Job from "@/app/_components/Job";
-import SearchFilter from "@/app/_components/SearchFilter";
-import { getJobsByFilters } from "@/app/_components/actions";
+import CardList from "@/app/components/CardList";
+import JobDetails from "@/app/components/JobDetails";
+import SearchFilter from "@/app/components/SearchFilter";
+import { getJobsByFilters } from "@/app/components/actions";
 
 export default async function Home({ searchParams }) {
   let params = new URLSearchParams(searchParams);
@@ -16,7 +16,7 @@ export default async function Home({ searchParams }) {
       <div className={"min-h-screen bg-secondary-light-grey px-6"}>
         <SearchFilter />
         {/*<Job />*/}
-        <CardList data={filteredData} />
+        <CardList jobs={filteredData} />
       </div>
     </>
   );

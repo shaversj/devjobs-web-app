@@ -1,6 +1,6 @@
 import { Kumbh_Sans } from "next/font/google";
 import "./globals.css";
-import Header from "@/app/_components/Header";
+import Header from "@/app/components/Header";
 
 const kumbhSans = Kumbh_Sans({ weight: "variable", subsets: ["latin"], display: "swap", variable: "--font-kumbhSans" });
 
