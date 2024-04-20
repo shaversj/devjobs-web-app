@@ -10,8 +10,8 @@
     "db:push": "drizzle-kit push:sqlite --config drizzle.config.js",
     "db:generate": "drizzle-kit generate:sqlite --config drizzle.config.js",
     "db:studio": "drizzle-kit studio --host localhost --port 3002 --verbose --config drizzle.config.js",
-    "db:seed": "node --import tsx --env-file .env ./seed/insert.js",
-    "db:delete": "node --import tsx --env-file .env ./seed/delete.js"
+    "db:seed": "node --experimental-default-type=module ./seed/insert.js",
+    "db:delete": "node --experimental-default-type=module ./seed/delete.js"
   },
   "dependencies": {
     "better-sqlite3": "^9.5.0",
@@ -20,7 +20,6 @@
     "next": "14.2.1",
     "react": "^18",
     "react-dom": "^18",
-    "tsx": "^4.7.2",
     "use-debounce": "^10.0.0"
   },
   "devDependencies": {
