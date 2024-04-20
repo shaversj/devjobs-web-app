@@ -1,13 +1,14 @@
 "use client";
 
 import { usePathname, useSearchParams, useRouter } from "next/navigation";
+import { useDebouncedCallback } from "use-debounce";
 
 export default function SearchFilter() {
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const { replace } = useRouter();
 
-  const handleSearch = (term) => {
+  const handleSearch = useDebouncedCallback((term) => {
     const params = new URLSearchParams(searchParams);
     if (term) {
       params.set("jobFilter", term);
@@ -15,7 +16,7 @@ export default function SearchFilter() {
       params.delete("jobFilter");
     }
     replace(`${pathname}?${params.toString()}`);
-  };
+  }, 300);
 
   return (
     <div className={"flex h-[80px] -translate-y-1/2 items-center rounded-md bg-white pl-6 pr-4"}>

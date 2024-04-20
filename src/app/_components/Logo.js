@@ -19,9 +19,7 @@ export default function Logo({ logo, company, variant }) {
   return (
     <>
       <div
-        className={cn(`${logoBackgroundVarients[company]}`, {
-          "absolute z-10 flex h-[50px] w-[50px] translate-y-[-50%] transform items-center justify-center rounded-xl": variant === "card",
-        })}
+        className={`absolute z-10 flex h-[50px] w-[50px] translate-y-[-50%] transform items-center justify-center rounded-xl ${logoBackgroundVarients[company]}`}
       >
         <img src={logo} alt={company} />
       </div>
