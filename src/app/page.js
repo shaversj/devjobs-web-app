@@ -13,7 +13,7 @@ export default async function Home({ searchParams }) {
 
   return (
     <>
-      <div className={"min-h-screen bg-secondary-light-grey px-6"}>
+      <div className={"min-h-screen bg-secondary-light-grey px-6 md:px-[40px] lg:px-[165px]"}>
         <SearchFilter />
         {/*<Job />*/}
         <CardList jobs={filteredData} />
