@@ -29,9 +29,10 @@ export default function SearchFilter() {
   );
 
   return (
-    <div className={"flex h-[80px] -translate-y-1/2 items-center rounded-md bg-white pl-6 pr-4"}>
+    <div className={"flex h-[80px] -translate-y-1/2 items-center rounded-md bg-white pl-6 pr-4 md:w-[680px] lg:w-[1090px] lg:pl-0 lg:pr-0"}>
+      <img src={"/assets/desktop/icon-search.svg"} alt={"search"} className={"pr-4 lg:pl-[32px]"} />
       <input
-        className={"h-[20px] w-[105px] text-secondary-dark-grey focus:outline-none md:w-[222px]"}
+        className={"h-[20px] w-[105px] text-secondary-dark-grey focus:outline-none md:w-[150px] lg:w-[312px]"}
         placeholder={"Filter by title"}
         onChange={(e) => {
           handleSearch(e.target.value);
@@ -39,31 +40,34 @@ export default function SearchFilter() {
         defaultValue={searchParams.get("jobFilter")?.toString()}
       />
 
-      <img src={"/assets/tablet/line.svg"} alt={"line"} className={"hidden md:block"} />
+      <img src={"/assets/tablet/line.svg"} alt={"line"} className={"hidden md:block lg:pl-[119px]"} />
 
+      <img src={"/assets/desktop/icon-location.svg"} alt={"location"} className={"hidden pl-[23px] md:block"} />
       <input
         onChange={(e) => {
           handleLocation(e.target.value);
         }}
-        className={"hidden h-[20px] w-[213px] pl-6 text-secondary-dark-grey focus:outline-none md:block"}
+        className={"hidden h-[20px] w-[150px] pl-6 text-secondary-dark-grey focus:outline-none md:block lg:w-[135px] lg:pl-4"}
         placeholder={"Filter by location"}
         defaultValue={searchParams.get("locationFilter")?.toString()}
       />
 
-      <img src={"/assets/tablet/line.svg"} alt={"line"} className={"hidden md:block"} />
+      <img src={"/assets/tablet/line.svg"} alt={"line"} className={"hidden md:block md:pl-6 lg:pl-[108px]"} />
 
       <button
         onClick={() => {
           handleContract();
         }}
-        className={"ml-5 hidden h-[24px] w-[24px] items-center justify-center bg-[#e7e8e9] md:flex"}
+        className={"ml-5 hidden h-[24px] w-[24px] items-center justify-center bg-[#e7e8e9] md:flex lg:ml-[32px]"}
       >
         {showCheck && <img src={"/assets/desktop/icon-check.svg"} alt={"check"} />}
       </button>
 
-      <span className={"hidden  text-nowrap pl-4 font-bold text-primary-very-dark-blue md:block"}>Full Time</span>
+      <span className={"hidden text-nowrap pl-4 font-bold text-primary-very-dark-blue md:block"}>Full Time</span>
 
-      <img src={"/assets/tablet/search.svg"} alt={"search"} className={"ml-[28px] hidden md:block"} />
+      <button className={"ml-[26px] hidden h-[48px] rounded-md bg-[#5964e0] font-semibold text-white md:block md:w-[80px] lg:-mr-8 lg:w-[123px]"}>
+        Search
+      </button>
 
       <div className={"ml-auto flex gap-x-6 md:hidden"}>
         <button>
