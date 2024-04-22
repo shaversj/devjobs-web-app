@@ -6,7 +6,7 @@ export default function Header() {
         <source media="(min-width: 768px)" srcSet={"/assets/tablet/bg-pattern-header.svg"} />
         <img src={"/assets/mobile/bg-pattern-header.svg"} alt={"bg-pattern-header"} />
       </picture>
-      <div className={"self-center px-6 [grid-area:box]"}>
+      <div className={"pl-[24px] pt-[32px] [grid-area:box] md:pl-[40px] md:pt-[42px] lg:pl-[165px] lg:pt-[35px]"}>
         <img src={"/assets/desktop/logo.svg"} alt={"logo"} />
       </div>
     </header>
