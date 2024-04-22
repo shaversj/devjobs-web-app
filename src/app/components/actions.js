@@ -1,5 +1,5 @@
-import { db } from "@/app/db";
-import { jobsTable } from "@/app/db/drizzle.schema";
+import { db } from "@/app/db/client";
+import { jobsTable } from "@/app/db/schema";
 import { and, like, sql, eq } from "drizzle-orm";
 
 export async function getJobsByFilters(jobFilter, locationFilter, contractFilter) {

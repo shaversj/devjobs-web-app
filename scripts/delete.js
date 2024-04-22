@@ -1,5 +1,5 @@
-import { db } from "../src/app/db/index.js";
-import { jobsTable } from "../src/app/db/drizzle.schema.js";
+import { db } from "../src/app/db/client.js";
+import { jobsTable } from "../src/app/db/schema.js";
 
 const cleanupDatabase = (db) => {
   try {

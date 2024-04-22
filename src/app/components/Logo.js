@@ -23,7 +23,7 @@ export default function Logo({ logo, company, varient }) {
             : `absolute z-10 flex h-[50px] w-[50px] translate-y-[-50%] transform items-center justify-center rounded-xl ${logoBackgroundVarients[company]} `
         }
       >
-        <img src={logo.slice(1)} alt={company} />
+        <img className={varient === "card" ? "md:h-[23px]" : ""} src={logo.slice(1)} alt={company} />
       </div>
     </>
   );
