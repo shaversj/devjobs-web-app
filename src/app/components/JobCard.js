@@ -1,6 +1,6 @@
 export default function JobCard({ job }) {
   return (
-    <div className={"pt-[40px]"}>
+    <div className={"pt-[40px] md:pt-0"}>
       <div className={"flex items-baseline gap-x-[12px] font-light text-secondary-dark-grey"}>
         {job.postedAt} <img src={"/assets/card-oval.svg"} alt={"oval"} /> {job.contract}
       </div>

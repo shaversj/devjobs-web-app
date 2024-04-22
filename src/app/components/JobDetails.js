@@ -4,12 +4,20 @@ import JobCard from "@/app/components/JobCard";
 export default function JobDetails({ job }) {
   return (
     <>
-      <div className={""}>
+      <div className={"md:mx-[48px] md:w-[689px]"}>
         <CompanyCard job={job} />
 
-        <div className={"mt-6 rounded-lg bg-white px-6"}>
-          <JobCard job={job} />
-          <button className={"mt-[50px] h-[48px] w-[279px] rounded-lg bg-[#5964E0] font-bold text-white"}>Apply Now</button>
+        <div className={"mt-6 w-full rounded-lg bg-white px-6 md:p-[48px]"}>
+          <div className={"md:flex md:items-center"}>
+            <JobCard job={job} />
+            <button
+              className={
+                "mt-[50px] h-[48px] w-[279px] w-full rounded-lg bg-[#5964E0] font-bold text-white md:ml-auto md:mt-0 md:h-[48px] md:w-[141px]"
+              }
+            >
+              Apply Now
+            </button>
+          </div>
 
           <section className={"pt-[32px]"}>
             <p className={"text-secondary-dark-grey"}>{job.description}</p>

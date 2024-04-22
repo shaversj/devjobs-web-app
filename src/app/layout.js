@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${kumbhSans.variable}`}>
+      <body className={`${kumbhSans.variable} bg-secondary-light-grey`}>
         <Header />
         {children}
       </body>
