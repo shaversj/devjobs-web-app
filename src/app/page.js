@@ -5,8 +5,6 @@ import { getJobsByFilters } from "@/app/components/actions";
 import localRawData from "@/assets/data.json";
 import { getJobsByFiltersFromFile } from "@/app/components/queryFile";
 
-export async function generateStaticParams() {}
-
 export default async function Home({ searchParams }) {
   let params = new URLSearchParams(searchParams);
   let jobFilter = params.get("jobFilter");
