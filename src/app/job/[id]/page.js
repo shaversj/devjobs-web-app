@@ -1,6 +1,6 @@
 import { getJobById } from "@/app/components/actions";
 import JobDetails from "@/app/components/JobDetails";
-import localRawData from "@/assets/data.json" with { type: "json" };
+import localRawData from "@/app/utils/data.json" with { type: "json" };
 
 // export async function generateStaticParams() {
 //   const jobs = localRawData;

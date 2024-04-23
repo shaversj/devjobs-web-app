@@ -1,4 +1,4 @@
-import localRawData from "@/assets/data.json" with { type: "json" };
+import localRawData from "@/app/utils/data.json" with { type: "json" };
 
 export function getJobsByFiltersFromFile(jobFilter, locationFilter, contractFilter) {
   return localRawData.filter((job) => {

@@ -2,7 +2,7 @@ import CardList from "@/app/components/CardList";
 import JobDetails from "@/app/components/JobDetails";
 import SearchFilter from "@/app/components/SearchFilter";
 import { getJobsByFilters } from "@/app/components/actions";
-import localRawData from "@/assets/data.json";
+import localRawData from "@/app/utils/data.json";
 import { getJobsByFiltersFromFile } from "@/app/components/queryFile";
 
 export async function generateStaticParams() {}
