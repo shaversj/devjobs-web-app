@@ -1,8 +1,5 @@
 import CardList from "@/app/components/CardList";
-import JobDetails from "@/app/components/JobDetails";
 import SearchFilter from "@/app/components/SearchFilter";
-import { getJobsByFilters } from "@/app/components/actions";
-import localRawData from "@/assets/data.json";
 import { getJobsByFiltersFromFile } from "@/app/components/queryFile";
 
 export default async function Home({ searchParams }) {

@@ -1,4 +1,3 @@
-import { getJobById } from "@/app/components/actions";
 import JobDetails from "@/app/components/JobDetails";
 import { LOCAL_RAW_DATA } from "@/app/constants/data";
 
