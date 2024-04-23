@@ -1,7 +1,7 @@
-import localRawData from "@/app/utils/data.json" with { type: "json" };
+import { LOCAL_RAW_DATA } from "@/app/constants/data";
 
 export function getJobsByFiltersFromFile(jobFilter, locationFilter, contractFilter) {
-  return localRawData.filter((job) => {
+  return LOCAL_RAW_DATA.filter((job) => {
     let jobLocation = job.location.toLowerCase();
     let jobPosition = job.position.toLowerCase();
     let jobContract = job.contract.toLowerCase();

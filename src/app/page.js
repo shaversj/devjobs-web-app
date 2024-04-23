@@ -2,7 +2,7 @@ import CardList from "@/app/components/CardList";
 import JobDetails from "@/app/components/JobDetails";
 import SearchFilter from "@/app/components/SearchFilter";
 import { getJobsByFilters } from "@/app/components/actions";
-import localRawData from "@/app/utils/data.json";
+import localRawData from "@/assets/data.json";
 import { getJobsByFiltersFromFile } from "@/app/components/queryFile";
 
 export async function generateStaticParams() {}
@@ -15,7 +15,7 @@ export default async function Home({ searchParams }) {
 
   // const filteredData = await getJobsByFilters(jobFilter, locationFilter, contractFilter);
 
-  const filteredData = await getJobsByFiltersFromFile(jobFilter, locationFilter, contractFilter);
+  const filteredData = getJobsByFiltersFromFile(jobFilter, locationFilter, contractFilter);
 
   return (
     <>

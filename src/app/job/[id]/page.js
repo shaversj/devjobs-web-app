@@ -1,6 +1,6 @@
 import { getJobById } from "@/app/components/actions";
 import JobDetails from "@/app/components/JobDetails";
-import localRawData from "@/app/utils/data.json" with { type: "json" };
+import { LOCAL_RAW_DATA } from "@/app/constants/data";
 
 // export async function generateStaticParams() {
 //   const jobs = localRawData;
@@ -13,6 +13,6 @@ export default async function Page({ params }) {
   // let job = await getJobById(params.id);
   // return <>{job && <JobDetails job={job[0]} />}</>;
 
-  let job = localRawData.find((job) => job.id === parseInt(params.id));
+  let job = LOCAL_RAW_DATA.find((job) => job.id === parseInt(params.id));
   return <JobDetails job={job} />;
 }
