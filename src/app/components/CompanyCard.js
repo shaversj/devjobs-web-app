@@ -4,7 +4,7 @@ export default function CompanyCard({ job }) {
   return (
     <>
       <div className={"relative z-30 -mt-[18px]"}>
-        <div className={"flex w-full flex-col items-center rounded-lg bg-white md:w-[689px] md:flex-row md:items-center md:rounded-xl"}>
+        <div className={"flex w-full flex-col items-center rounded-lg bg-white md:w-[689px] md:flex-row md:items-center md:rounded-xl lg:w-[730px]"}>
           <Logo logo={job.logo} company={job.company} varient={"card"} />
 
           <div className={"flex flex-col items-start md:pl-[40px]"}>

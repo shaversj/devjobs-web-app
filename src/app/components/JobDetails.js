@@ -4,7 +4,7 @@ import JobCard from "@/app/components/JobCard";
 export default function JobDetails({ job }) {
   return (
     <>
-      <div className={"md:mx-[48px] md:w-[689px]"}>
+      <div className={"md:mx-[48px] md:w-[689px] lg:mx-auto lg:w-[730px]"}>
         <CompanyCard job={job} />
 
         <div className={"mt-6 w-full rounded-lg bg-white px-6 md:p-[48px]"}>
