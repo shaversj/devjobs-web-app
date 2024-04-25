@@ -3,6 +3,7 @@
 import { usePathname, useSearchParams, useRouter } from "next/navigation";
 import { useDebouncedCallback } from "use-debounce";
 import { useState } from "react";
+import Toggle from "@/app/components/Toggle";
 
 export default function SearchFilter() {
   const [showCheck, setShowCheck] = useState(false);
@@ -29,10 +30,14 @@ export default function SearchFilter() {
   );
 
   return (
-    <div className={"flex h-[80px] -translate-y-1/2 items-center rounded-md bg-white pl-6 pr-4 md:w-[680px] lg:w-[1090px] lg:pl-0 lg:pr-0"}>
+    <div
+      className={
+        "flex h-[80px] -translate-y-1/2 items-center rounded-md bg-white pl-6 pr-4 md:w-[689px] md:-translate-y-1/4 lg:w-[1110px] lg:pl-0 lg:pr-0"
+      }
+    >
       <img src={"/assets/desktop/icon-search.svg"} alt={"search"} className={"pr-4 lg:pl-[32px]"} />
       <input
-        className={"h-[20px] w-[105px] text-secondary-dark-grey focus:outline-none md:w-[150px] lg:w-[312px]"}
+        className={"h-[20px] w-[105px] text-secondary-dark-grey placeholder:font-thin focus:outline-none md:w-[150px] lg:w-[312px]"}
         placeholder={"Filter by title"}
         onChange={(e) => {
           handleSearch(e.target.value);
@@ -47,7 +52,7 @@ export default function SearchFilter() {
         onChange={(e) => {
           handleLocation(e.target.value);
         }}
-        className={"hidden h-[20px] w-[150px] pl-6 text-secondary-dark-grey focus:outline-none md:block lg:w-[135px] lg:pl-4"}
+        className={"hidden h-[20px] w-[150px] pl-6 text-secondary-dark-grey placeholder:font-thin focus:outline-none md:block lg:w-[135px] lg:pl-4"}
         placeholder={"Filter by location"}
         defaultValue={searchParams.get("locationFilter")?.toString()}
       />

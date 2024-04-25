@@ -4,10 +4,10 @@ import Link from "next/link";
 export default function Card({ job }) {
   return (
     <>
-      <article className={"relative h-[228px] w-[327px] rounded-xl bg-white px-[32px]"}>
+      <article className={"relative w-[327px] rounded-xl bg-white pl-[32px] md:w-[339px] lg:w-[350px]"}>
         <Link href={`/job/${job.id}`}>
           <Logo logo={job.logo} company={job.company} />
-          <div className={"pt-[49px]"}>
+          <div className={"h-[228px] pt-[49px] md:h-[253px]"}>
             <div className={"flex items-baseline gap-x-[12px] font-light text-secondary-dark-grey"}>
               {job.postedAt} <img src={"/assets/card-oval.svg"} alt={"oval"} /> {job.contract}
             </div>
