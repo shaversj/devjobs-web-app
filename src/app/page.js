@@ -2,6 +2,8 @@ import CardList from "@/app/components/CardList";
 import SearchFilter from "@/app/components/SearchFilter";
 import { getJobsByFiltersFromFile } from "@/app/components/queryFile";
 
+export const runtime = "edge";
+
 export default async function Home({ searchParams }) {
   let params = new URLSearchParams(searchParams);
   let jobFilter = params.get("jobFilter");

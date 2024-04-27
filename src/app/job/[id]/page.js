@@ -7,7 +7,7 @@ import { LOCAL_RAW_DATA } from "@/app/constants/data";
 //     id: job.id.toString(),
 //   }));
 // }
-
+export const runtime = "edge";
 export default async function Page({ params }) {
   // let job = await getJobById(params.id);
   // return <>{job && <JobDetails job={job[0]} />}</>;
