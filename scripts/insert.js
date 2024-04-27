@@ -1,7 +1,7 @@
 import { db } from "../src/app/db/client.js";
 import { jobsTable } from "../src/app/db/schema.js";
 
-import localRawData from "@/assets/data.json" with { type: "json" };
+import localRawData from "../src/assets/data.json" with { type: "json" };
 
 const seedDatabase = async () => {
   try {

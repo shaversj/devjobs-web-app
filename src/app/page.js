@@ -1,6 +1,6 @@
 import CardList from "@/app/components/CardList";
 import SearchFilter from "@/app/components/SearchFilter";
-import { getJobsByFiltersFromFile } from "@/app/components/queryFile";
+import { getJobsByFilters } from "@/app/components/actions";
 
 export const runtime = "edge";
 
@@ -10,9 +10,8 @@ export default async function Home({ searchParams }) {
   let locationFilter = params.get("locationFilter");
   let contractFilter = params.get("contractFilter");
 
-  // const filteredData = await getJobsByFilters(jobFilter, locationFilter, contractFilter);
-
-  const filteredData = getJobsByFiltersFromFile(jobFilter, locationFilter, contractFilter);
+  const filteredData = await getJobsByFilters(jobFilter, locationFilter, contractFilter);
+  // const filteredData = getJobsByFiltersFromFile(jobFilter, locationFilter, contractFilter);
 
   return (
     <>

@@ -5,6 +5,7 @@ export default {
   out: "./drizzle",
   driver: "better-sqlite", // 'pg' | 'mysql2' | 'better-sqlite' | 'libsql' | 'turso'
   dbCredentials: {
-    url: "sqlite.db",
+    wranglerConfigPath: "wrangler.toml",
+    dbName: "jobs",
   },
 };

@@ -1,0 +1,12 @@
+name = "devjobs-web-app"
+#main = "src/index.js"
+compatibility_date = "2024-04-19"
+compatibility_flags = ["nodejs_compat"]
+
+
+[[d1_databases]]
+binding = "DB" # i.e. available in your Worker on env.DB
+database_name = "jobs"
+database_id = "5dccaae3-f742-4ae9-b956-e6f6967db764"
+preview_database_id = "DB" # Required for Pages local development
+

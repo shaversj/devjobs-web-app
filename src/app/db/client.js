@@ -1,5 +1,4 @@
-import { drizzle } from "drizzle-orm/better-sqlite3";
-import Database from "better-sqlite3";
+import { getRequestContext } from "@cloudflare/next-on-pages";
+import { drizzle } from "drizzle-orm/d1";
 
-const sqlite = new Database("sqlite.db");
-export const db = drizzle(sqlite);
+export const db = drizzle(getRequestContext().env.DB);
