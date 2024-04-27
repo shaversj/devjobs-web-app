@@ -3,6 +3,11 @@ module.exports = {
   content: ["./src/pages/**/*.{js,ts,jsx,tsx,mdx}", "./src/components/**/*.{js,ts,jsx,tsx,mdx}", "./src/app/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
+      screens: {
+        sm: "375px",
+        md: "768px",
+        lg: "1440px",
+      },
       fontSize: {
         h1: "28px",
         h2: "24px",

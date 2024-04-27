@@ -3,7 +3,6 @@
 import { usePathname, useSearchParams, useRouter } from "next/navigation";
 import { useDebouncedCallback } from "use-debounce";
 import { useState } from "react";
-import Toggle from "@/app/components/Toggle";
 
 export default function SearchFilter() {
   const [showCheck, setShowCheck] = useState(false);
