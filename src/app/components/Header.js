@@ -9,7 +9,7 @@ export default function Header() {
         <picture className={"[grid-area:box]"}>
           <source media="(min-width: 1440px)" srcSet={"/assets/desktop/bg-pattern-header.svg"} />
           <source media="(min-width: 768px)" srcSet={"/assets/tablet/bg-pattern-header.svg"} />
-          <img src={"/assets/mobile/bg-pattern-header.svg"} alt={"bg-pattern-header"} />
+          <img className={"w-full"} src={"/assets/mobile/bg-pattern-header.svg"} alt={"bg-pattern-header"} />
         </picture>
         <div className={"mx-6 w-[328px] pt-[32px] [grid-area:box] md:ml-[39px] md:w-[689px] md:pt-[42px] lg:mx-[164px] lg:w-[1110px] lg:pt-[35px]"}>
           <div className={"flex items-center"}>
