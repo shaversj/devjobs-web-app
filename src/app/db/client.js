@@ -1,4 +1,4 @@
-import { getOptionalRequestContext, getRequestContext } from "@cloudflare/next-on-pages";
+import { getOptionalRequestContext } from "@cloudflare/next-on-pages";
 import { drizzle } from "drizzle-orm/d1";
 const { env } = getOptionalRequestContext() ?? { env: {} };
 

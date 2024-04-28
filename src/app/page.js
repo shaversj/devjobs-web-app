@@ -11,7 +11,6 @@ export default async function Home({ searchParams }) {
   let contractFilter = params.get("contractFilter");
 
   const filteredData = await getJobsByFilters(jobFilter, locationFilter, contractFilter);
-  // const filteredData = getJobsByFiltersFromFile(jobFilter, locationFilter, contractFilter);
 
   return (
     <>
