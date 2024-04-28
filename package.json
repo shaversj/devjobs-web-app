@@ -7,11 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "db:push": "drizzle-kit push:sqlite --config drizzle.config.js",
-    "db:generate": "drizzle-kit generate:sqlite --config drizzle.config.js",
-    "db:studio": "drizzle-kit studio --host localhost --port 3002 --verbose --config drizzle.config.js",
-    "db:seed": "node --experimental-default-type=module scripts/insert.js",
-    "db:delete": "node --experimental-default-type=module scripts/delete.js"
+    "db:push_local": "npx wrangler d1 execute jobs --local --file=./drizzle/0000_wealthy_boom_boom.sql",
+    "db:push_cloud_d1": "npx wrangler d1 execute jobs --remote --file=./drizzle/0000_wealthy_boom_boom.sql",
+    "db:generate_schema": "drizzle-kit generate:sqlite --config drizzle.config.js",
+    "db:seed_cloud_d1": "npx wrangler d1 execute jobs --remote --file=./scripts/job.sql"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.19",
